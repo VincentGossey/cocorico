@@ -12,6 +12,7 @@ imports:
     - { resource: "@CocoricoCoreBundle/Resources/config/Services/subscribers.yml" }
 
 services:
+    _defaults: {public: true}
     #Custom classes
     cocorico.listing_search_request:
         class: Cocorico\CoreBundle\Model\ListingSearchRequest
@@ -46,7 +47,7 @@ services:
             - "%kernel.environment%"
 
     #Translator manager
-    cocorico.translator.manager: 
+    cocorico.translator.manager:
         class: Cocorico\CoreBundle\Model\Manager\TranslateManager
         arguments:
             - "%cocorico.translator.secret.key%"

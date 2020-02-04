@@ -1,4 +1,5 @@
 services:
+    _defaults: {public: true}
     sonata.admin.listing:
         class: Cocorico\CoreBundle\Admin\ListingAdmin
         tags:

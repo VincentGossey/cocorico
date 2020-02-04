@@ -27,10 +27,12 @@ security:
                 target:         /%cocorico.admin%/
 #                invalidate_session: false #uncomment it to avoid to logout from all firewall
             anonymous:          true
+            logout_on_user_change: true
 
         main:
             context: frontend
             pattern: ^/(%cocorico.locales_string%)
+            logout_on_user_change: true
             #if some changes are done make same change in Cocorico/CoreBundle/Resources/config/Services/listeners.yml
             form_login:
                 provider: fos_userbundle

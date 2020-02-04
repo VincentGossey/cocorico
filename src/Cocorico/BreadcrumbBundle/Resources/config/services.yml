@@ -1,4 +1,5 @@
 services:
+    _defaults: {public: true}
     cocorico.breadcrumbs_yaml_parser:
         class: Symfony\Component\Yaml\Parser
 
@@ -6,6 +7,11 @@ services:
         class: Symfony\Component\Config\FileLocator
         arguments:
             - "%kernel.root_dir%/../src/Cocorico/BreadcrumbBundle/Resources/content/"
+            -
+    white_october_breadcrumbs:
+        class: WhiteOctober\BreadcrumbsBundle\Model\Breadcrumbs
+        calls:
+            - [ setRouter, ['@Symfony\Component\Routing\RouterInterface'] ]
 
     cocorico.breadcrumbs_loader:
         class: Cocorico\BreadcrumbBundle\Services\BreadcrumbsYamlLoader
@@ -15,6 +21,7 @@ services:
 
     cocorico.breadcrumbs_manager:
         class: Cocorico\BreadcrumbBundle\Services\BreadcrumbsManager
+        autowire: false
         arguments:
             - "@white_october_breadcrumbs"
             - "@jms_i18n_routing.router"

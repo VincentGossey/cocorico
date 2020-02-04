@@ -157,10 +157,8 @@ class BookingFormHandler
         $booking = $form->getData();
 
         //No self booking
-        if ($booking->getUser() == $booking->getListing()->getUser()) {
-            $result = -2;
-
-            return $result;
+        if ($booking->getUser() === $booking->getListing()->getUser()) {
+            return -2;
         }
 
         return 1;
