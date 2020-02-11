@@ -1,6 +1,7 @@
 services:
     sonata.admin.user_address:
         class: Cocorico\UserBundle\Admin\UserAddressAdmin
+        public: true
         tags:
             - { name: sonata.admin, manager_type: orm, show_in_dashboard: false }
         arguments:

@@ -7,7 +7,7 @@ app/config/parameters.yml
 app/config/parameters_test.yml
 app/SymfonyRequirements.php
 
-app/logs
+app/log
 !app/logs/.gitkeep
 !app/build/logs/.gitkeep
 
@@ -91,3 +91,16 @@ tmp/mangopay/MangoPaySdkStorage.tmp.php
 doc/phpdocs/sami.phar
 
 phpunit.xml
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###

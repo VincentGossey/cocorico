@@ -1,4 +1,5 @@
 services:
+    _defaults: { public: true }
     #Voters
     security.access.listing_voter:
         class:      Cocorico\CoreBundle\Security\Voter\ListingVoter
