@@ -1,0 +1,12 @@
+jms_translation:
+    dumper:
+        add_references: false
+        add_date: false
+    configs:
+        cocorico:
+            dirs: ["%kernel.root_dir%", "%kernel.root_dir%/../src"]
+            output_dir: "%kernel.root_dir%/Resources/translations"
+            #            ignored_domains: [routes]
+            excluded_names: ["*TestCase.php", "*Test.php", "TranslationExtension.php"]
+            excluded_dirs: [cache, data, logs, Tests]
+            extractors: [jms_i18n_routing, cocorico_breadcrumbs, sonata_admin ]

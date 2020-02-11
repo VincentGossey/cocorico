@@ -1,0 +1,6 @@
+a2lix_translation_form:
+    locale_provider: default       # [1]
+    locales: '%cocorico.locales%'      # [1-a]
+    default_locale: '%cocorico.locale%'             # [1-b]
+    required_locales: '%cocorico.locales%'        # [1-c]
+    templating: "CocoricoCoreBundle:Form:fields_translations.html.twig"      # [2]
