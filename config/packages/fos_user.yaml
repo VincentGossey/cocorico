@@ -1,0 +1,35 @@
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: App\Entity\User
+    from_email:
+        address: "xxx@gmail.com"
+        sender_name: "xxx@gmail.com"
+
+#    db_driver: orm
+#    firewall_name: main
+#    user_class: Cocorico\UserBundle\Entity\User
+#    group:
+#        group_class: Cocorico\UserBundle\Entity\Group
+#    service:
+#        mailer: cocorico_user.mailer.twig_swift
+#        user_manager: cocorico_user.user_manager
+#    from_email:
+#        address:        "%cocorico.from_email%"
+#        sender_name:    "%cocorico.site_name%"
+#    registration:
+#        confirmation:
+#            enabled:    "%cocorico.registration_confirmation%"
+#        form:
+#            type: Cocorico\UserBundle\Form\Type\RegistrationFormType
+#            name: user_registration
+#            validation_groups: [CocoricoRegistration]
+#    resetting:
+#        form:
+#            type: Cocorico\UserBundle\Form\Type\ResettingFormType
+#            name: user_resetting
+#    profile:
+#        form:
+#            type: Cocorico\UserBundle\Form\Type\ProfileAboutMeFormType
+#            name: user_profile
+#            validation_groups: [CocoricoProfile]

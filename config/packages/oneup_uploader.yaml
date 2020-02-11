@@ -1,0 +1,29 @@
+# Read the documentation: https://github.com/1up-lab/OneupUploaderBundle/blob/master/Resources/doc/index.md
+oneup_uploader:
+    mappings:
+        # This is a mapping example, remove it and create your own mappings.
+        gallery:
+            frontend: dropzone # or any uploader you use in the frontend
+        user_images:
+            max_size: 8000000
+            frontend: blueimp
+            allowed_mimetypes:
+                image/jpeg: ['jpg', 'jpeg', 'jpe']
+                image/png: ['png']
+                image/gif: ['gif']
+            enable_progress: true
+            namer: cocorico.namer.image_namer
+            storage:
+                directory: '%kernel.project_dir%/web/uploads/users/images/'
+
+        listing_images:
+            max_size: 10000000
+            frontend: blueimp
+            allowed_mimetypes:
+                image/jpeg: ['jpg', 'jpeg', 'jpe']
+                image/png: ['png']
+                image/gif: ['gif']
+            enable_progress: true
+            namer: cocorico.namer.image_namer
+            storage:
+                directory: '%kernel.project_dir%/web/uploads/listings/images/'
